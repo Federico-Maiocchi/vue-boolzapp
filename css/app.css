@@ -91,7 +91,7 @@ body {
 .container-fluid-bottom {
     min-width: 100%;
     flex-grow: 1;
-    background-color: var(--dark-gray);
+    background-color: lightgray;
 }
 
 /* APP */
@@ -294,8 +294,28 @@ body {
 
 /* chat footer */
 .chat-footer {
-    padding: 25px;
+    padding: 5px 10px;
     background-color: var(--gray);
+}
+
+.row-chat-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+}
+
+.icon-footer {
+    font-size: 20px;
+    color: var(--dark-gray);
+
+}
+
+.chat-input {
+    flex-grow: 1;
+    line-height: 30px;
 }
 
 
