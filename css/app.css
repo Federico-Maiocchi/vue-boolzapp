@@ -252,6 +252,14 @@ body {
     color: var(--dark-gray);
 }
 
+li:hover {
+    background-color: darkgrey;
+}
+
+.active {
+    background-color: darkgray;
+}
+
 
 /* MAIN PAGE */
 .main-page {

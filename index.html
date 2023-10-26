@@ -55,7 +55,8 @@
                                 <ul class="contacts-wraps">
                                     <li class="li-border-top" 
                                         v-for="(contact, index) in contacts" 
-                                        @click="thisContact(index)" 
+                                        @click="thisContact(index)"
+                                        :class="currentContact === index ? 'active' : '' "
                                         :key="index">
                                         <div class="row-contacts">
                                             <figure class="figure-contacts">

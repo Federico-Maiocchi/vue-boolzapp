@@ -178,12 +178,23 @@ createApp ({
             // console.log('ho cliccato qui')
             this.currentContact = index;
             // console.log('ho cliccato qui', index)
-        }
+        },
+
+        // getPropretyInArray() {
+
+        //     const messages = [];
+
+        //     for (let i = messages.length - 1; i >= 0; i--) {
+        //         messagesIndex = messages.length[i];
+        //         console.log(this.messagesIndex)
+        //     }
+        // },
         
     },
     ////////////////////////////////////////////////////////////////////////////
     mounted() {
         // console.log('Prova Vue');
+        
     }
 
 }).mount ('#app')
