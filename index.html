@@ -11,7 +11,7 @@
 <body>
     <div class="container-fluid-top"></div>
     <div class="container-fluid-bottom">
-        <div id="app" class="debug" >
+        <div id="app">
             <div class="app-container">
                 <div class="row">
                     <!-- HEADER -->
@@ -53,13 +53,13 @@
                             <!-- contacts -->
                             <div class="contacts">
                                 <ul>
-                                    <li class="li-border-top">
+                                    <li class="li-border-top" v-for="(contact, index) in contacts ">
                                         <div class="row-contacts">
                                             <figure class="figure-contacts">
                                                 <div class="row-figure">
-                                                    <img src="./img/avatar_1.jpg" alt="">
+                                                    <img :src="contact.avatar" alt="">
                                                     <div>
-                                                        <h4 class="name-contacts">Michele</h4>
+                                                        <h4 class="name-contacts">{{contact.name}}</h4>
                                                         <p class="message-contacts">Ultimo messaggio inviato</p>
                                                     </div> 
                                                 </div>   

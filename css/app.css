@@ -102,6 +102,7 @@ body {
     top: 20px;
     z-index: 1;
     transform: translate(-50%, -50%);
+    /* height: 100%; */
 }
 
 .app-container {
@@ -244,7 +245,6 @@ body {
 
 /* MAIN PAGE */
 .main-page {
-    height: 500px;
     flex-grow: 1;
 }
 
