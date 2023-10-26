@@ -5,6 +5,7 @@ const {createApp} = Vue;
 createApp ({
     data() {
         return {
+            currentContact: 0,
             contacts: [
                 {
                 name: 'Michele',
@@ -167,12 +168,17 @@ createApp ({
                         }
                     ],
                 }
-                ]
+                ],
+                
         }
     },
     ////////////////////////////////////////////////////////////////////////////
     methods: {
-
+        thisContact(index) {
+            // console.log('ho cliccato qui')
+            this.currentContact = index;
+            // console.log('ho cliccato qui', index)
+        }
         
     },
     ////////////////////////////////////////////////////////////////////////////

@@ -52,8 +52,11 @@
                             </div>
                             <!-- contacts -->
                             <div class="contacts">
-                                <ul>
-                                    <li class="li-border-top" v-for="(contact, index) in contacts ">
+                                <ul class="contacts-wraps">
+                                    <li class="li-border-top" 
+                                        v-for="(contact, index) in contacts" 
+                                        @click="thisContact(index)" 
+                                        :key="index">
                                         <div class="row-contacts">
                                             <figure class="figure-contacts">
                                                 <div class="row-figure">
@@ -78,10 +81,10 @@
                             <div class="chat-header">
                                 <div class="row-profile">
                                     <figure class="figure-user">
-                                        <div class="row-figure">
-                                            <img src="./img/avatar_1.jpg" alt="">
+                                        <div class="row-figure" >
+                                            <img :src="contacts[currentContact].avatar" alt="">
                                             <div>
-                                                <h4 class="name-contacts">Michele</h4>
+                                                <h4 class="name-contacts">{{contacts[currentContact].name}}</h4>
                                                 <p class="message-contacts">Ultimo accesso oggi alle 12:00</p>
                                             </div> 
                                         </div>   

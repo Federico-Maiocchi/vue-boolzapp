@@ -80,6 +80,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .container-fluid-top {
@@ -102,6 +103,7 @@ body {
     top: 20px;
     z-index: 1;
     transform: translate(-50%, -50%);
+    overflow: hidden;
     /* height: 100%; */
 }
 
@@ -109,12 +111,14 @@ body {
     min-width: 1200px;
     height: 600px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 /* HEADER PAGE */
 .header-page {
     flex-shrink: 0;
-    min-width: 300px;  
+    min-width: 300px;
+    overflow: hidden;  
 }
 
 /* my profile */
@@ -211,6 +215,12 @@ body {
 .contacts {
     flex-grow: 1;
     background-color: var(--light);
+    overflow: hidden;
+}
+
+
+.contacts-wraps {
+    overflow: auto;
 }
 
 .row-contacts {
@@ -246,6 +256,7 @@ body {
 /* MAIN PAGE */
 .main-page {
     flex-grow: 1;
+    overflow: hidden;
 }
 
 /* chat header */
@@ -264,6 +275,7 @@ body {
     flex-grow: 1;
     background-color: var(--light);
     background-image: url(../img/mine.jpg);
+    overflow: auto;
 }
 
 /* message send */
