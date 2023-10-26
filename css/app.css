@@ -134,14 +134,14 @@ body {
 
 /* notifications */
 .notifications {
-    padding: 12px 0px;
+    padding: 12px 10px;
     background-color: var(--blue);
 }
 
 .row-notifications {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    gap:5px;
     align-items: center;
 
 }
@@ -152,6 +152,8 @@ body {
 
 .p-small-notif {
     font-size: 10px;
+    color: var(--dark-gray);
+    text-decoration: underline;
 }
 
 .icon-notif {
@@ -162,18 +164,43 @@ body {
     color: var(--blue);
 }
 
-
-
+/* search bar */
 .search-bar {
-    padding: 15px;
+    padding: 5px;
     background-color: var(--gray);
 }
 
+.row-search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+.btn-search {
+    padding: 0px 15px;
+    font-size: 15px;
+    background-color: var(--light);
+    border: none;
+    border-radius: 5px;
+}
+
+.input-bar {
+    flex-grow: 1;
+    line-height: 22px;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+/* contacts */
 .contacts {
     padding: 25px;
     flex-grow: 1;
     background-color: var(--light);
 }
+
+
+
 
 
 /* MAIN PAGE */
