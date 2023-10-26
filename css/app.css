@@ -266,6 +266,33 @@ body {
     background-image: url(../img/mine.jpg);
 }
 
+/* message send */
+.container-send {
+    max-width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.message-send {
+    background-color: var(--light-green);
+    padding: 15px;
+    border-radius: 20px;
+}
+
+/* message received */
+.ctn-received {
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.mesg-received {
+    background-color: var(--light);
+}
+
+/* chat footer */
 .chat-footer {
     padding: 25px;
     background-color: var(--gray);
