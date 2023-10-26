@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+ul, ol {
+    list-style: none;
+}
 
 html {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -18,6 +21,7 @@ html {
     --blue:#8edafd;
     --light:#ffff;
     --dark: black;
+
 }
 
 
@@ -46,6 +50,16 @@ html {
 
 .align-items-center {
     align-items: center;
+}
+
+/* LI */
+.li-border-top {
+    border-top: 2px solid var(--dark-gray);
+}
+
+/* COLOR */
+.bg-dark-gray {
+    background-color: var(--dark-gray);
 }
 
 /* IMAGE AND ICON */
@@ -194,13 +208,38 @@ body {
 
 /* contacts */
 .contacts {
-    padding: 25px;
     flex-grow: 1;
     background-color: var(--light);
 }
 
+.row-contacts {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.figure-contacts {
+    flex-grow: 1;
+    padding: 5px 10px;
+}
 
+.row-figure {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.message-contacts {
+    font-size: 10px;
+    color: var(--dark-gray);
+}
+
+.hours {
+    padding: 2px ;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--dark-gray);
+}
 
 
 /* MAIN PAGE */
@@ -209,11 +248,18 @@ body {
     flex-grow: 1;
 }
 
+/* chat header */
 .chat-header {
-    padding: 25px;
+    padding: 5px;
     background-color: var(--gray);
 }
 
+.figure-contacts {
+    flex-grow: 1;
+    padding: 5px;
+}
+
+/* chat body */
 .chat-body {
     flex-grow: 1;
     background-color: var(--light);
