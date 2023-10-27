@@ -188,14 +188,30 @@ createApp ({
                 message: this.msgEntrance,
                 status: 'sent',
             }
-            console.log(this.msgEntrance)
+            // console.log(this.msgEntrance)
 
             this.contacts[this.currentContact].messages.push(newSentMsg);
-            console.log(this.contacts[this.currentContact].messages)
+            // console.log(this.contacts[this.currentContact].messages)
+
 
             this.msgEntrance = '';
 
-        }
+            setTimeout(() => {
+
+                const newReceivedMsg = {
+                    date: '10/01/2020 15:51:00',
+                    message: 'Scemo chi legge',
+                    status: 'received'
+                }
+    
+                this.contacts[this.currentContact].messages.push(newReceivedMsg);
+                console.log(this.contacts[this.currentContact].messages)
+
+            }, 1000 );
+
+
+        },
+
 
         // getPropretyInArray() {
 
