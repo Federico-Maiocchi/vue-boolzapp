@@ -6,6 +6,7 @@ createApp ({
     data() {
         return {
             currentContact: 0,
+            msgEntrance: '',
             contacts: [
                 {
                 name: 'Michele',
@@ -179,6 +180,22 @@ createApp ({
             this.currentContact = index;
             // console.log('ho cliccato qui', index)
         },
+
+        addNewSentMsg() {
+
+            const newSentMsg = {
+                date: '10/01/2020 15:51:00',
+                message: this.msgEntrance,
+                status: 'sent',
+            }
+            console.log(this.msgEntrance)
+
+            this.contacts[this.currentContact].messages.push(newSentMsg);
+            console.log(this.contacts[this.currentContact].messages)
+
+            this.msgEntrance = '';
+
+        }
 
         // getPropretyInArray() {
 
