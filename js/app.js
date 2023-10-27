@@ -7,6 +7,8 @@ createApp ({
         return {
             currentContact: 0,
             msgEntrance: '',
+            nameSearch: '',
+            nameArray: [],
             contacts: [
                 {
                 name: 'Michele',
@@ -209,8 +211,15 @@ createApp ({
 
             }, 1000 );
 
-
         },
+
+        searchName() {
+            this.nameArray.push(this.nameSearch)
+            
+            const nameLetter = this.nameArray.slice(-1);
+            const letterString = nameLetter.toString()
+            console.log(letterString)
+        }
 
 
 

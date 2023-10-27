@@ -47,7 +47,7 @@
                             <div class="search-bar ">
                                 <div class="row-search">
                                     <button class="btn-search icon"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                    <input class="input-bar" type="text">
+                                    <input class="input-bar" v-model="nameSearch" @keyup="searchName" type="text">
                                 </div>
                             </div>
                             <!-- contacts -->
