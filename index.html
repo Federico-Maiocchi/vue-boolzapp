@@ -13,7 +13,7 @@
     <div class="container-fluid-bottom">
         <div id="app">
             <div class="app-container">
-                <div class="row">
+                <div class="row height-100">
                     <!-- HEADER -->
                     <header class="header-page">
                         <div class="row flex-column height-100">
@@ -47,7 +47,7 @@
                             <div class="search-bar ">
                                 <div class="row-search">
                                     <button class="btn-search icon"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                    <input class="input-bar" v-model="nameSearch" @keyup="searchName" type="text">
+                                    <input class="input-bar" v-model="nameSearch" @keyup="searchName" type="text" placeholder="cerca e inizia una nuova chat">
                                 </div>
                             </div>
                             <!-- contacts -->
@@ -58,7 +58,7 @@
                                         @click="thisContact(index)"
                                         :class="currentContact === index ? 'active' : '' "
                                         :key="index">
-                                        <div class="row-contacts">
+                                        <div class="row-contacts" v-if="contact.visible === true">
                                             <figure class="figure-contacts">
                                                 <div class="row-figure">
                                                     <img :src="contact.avatar" alt="">
@@ -115,7 +115,7 @@
                             <div class="chat-footer">
                                 <div class="row-chat-footer">
                                     <div class="emoji icon-footer p-left"><i class="fa-regular fa-face-smile"></i></div>
-                                <input class="chat-input" type="text" v-model="msgEntrance" @keyup.enter="addNewSentMsg()">
+                                <input class="chat-input" type="text" v-model="msgEntrance" @keyup.enter="addNewSentMsg()" placeholder="Scrivi messaggio">
                                 <div class="vocal-message icon-footer p-right"><i class="fa-solid fa-microphone"></i></div>
                                 </div> 
                             </div>

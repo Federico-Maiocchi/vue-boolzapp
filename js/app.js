@@ -219,7 +219,23 @@ createApp ({
             const nameLetter = this.nameArray.slice(-1);
             const letterString = nameLetter.toString()
             console.log(letterString)
-        }
+
+            for (let i = 0; i < this.contacts.length; i++) {
+
+                const nameCurrent = this.contacts[i];
+                // console.log(nameCurrent)
+
+                const nameConst = nameCurrent.name.toLowerCase()
+                // console.log(nameConst)
+
+                if(nameConst.includes(letterString)) {
+                    nameCurrent.visible = true
+                }  else {
+                    nameCurrent.visible = false
+                }
+
+            }
+        },
 
 
 
