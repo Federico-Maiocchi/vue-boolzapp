@@ -53,12 +53,11 @@
                             <!-- contacts -->
                             <div class="contacts">
                                 <ul class="contacts-wraps">
-                                    <li class="li-border-top" 
-                                        v-for="(contact, index) in contacts" 
+                                    <li v-for="(contact, index) in contacts" 
                                         @click="thisContact(index)"
                                         :class="currentContact === index ? 'active' : '' "
                                         :key="index">
-                                        <div class="row-contacts" v-if="contact.visible === true">
+                                        <div class="row-contacts border-top" v-if="contact.visible === true">
                                             <figure class="figure-contacts">
                                                 <div class="row-figure">
                                                     <img :src="contact.avatar" alt="">
@@ -104,7 +103,14 @@
                                     :class="item.status === 'received' ? 'ctn-received' : '' ">
 
                                     <p class="message-send" 
-                                    :class="item.status === 'received' ? 'mesg-received' : '' ">{{item.message}}</p>
+                                    :class="item.status === 'received' ? 'mesg-received' : '' ">
+                                        {{item.message}}
+                                        <span><i class="fa-solid fa-chevron-down"></i></span>
+                                    </p>
+                                    <div class="menu-item">
+                                        <p class="p-info">Messaggio info</p>
+                                        <p class="p-info delete">Cancella messaggio</p>
+                                    </div>
                                 </div>
 
                                 <!-- <div class="container-send ctn-received" >
