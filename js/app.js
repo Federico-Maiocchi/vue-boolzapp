@@ -200,7 +200,7 @@ createApp ({
 
                 const newReceivedMsg = {
                     date: '10/01/2020 15:51:00',
-                    message: 'Scemo chi legge',
+                    message: 'Push and commit',
                     status: 'received'
                 }
     
@@ -211,6 +211,7 @@ createApp ({
 
 
         },
+
 
 
         // getPropretyInArray() {
