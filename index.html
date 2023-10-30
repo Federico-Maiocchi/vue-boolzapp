@@ -102,19 +102,24 @@
                                     v-for="(item, index) in contacts[currentContact].messages" 
                                     :class="item.status === 'received' ? 'ctn-received' : '' ">
 
-                                    <p class="message-send ">
+                                    <p class="message-send" 
+                                        :class="item.status === 'received' ? 'mesg-received' : '' ">
                                         {{item.message}}
-                                        <span class="d-none box-menu" @click="show = !show">
+                                        <span class="d-none box-menu" 
+                                                @click="showMenuItem(index)">
                                             <i class="fa-solid fa-chevron-down">
-
                                             </i>
                                         </span>
-                                        <div class="menu-item " v-show="show">
+                                        <div class="menu-item " 
+                                            v-show="show && index === this.currentMessage"
+                                            @mouseleave="this.show = false">
                                             <p class="p-info">Messaggio info</p>
-                                            <p class="p-info delete">Cancella messaggio</p>
+                                            <p class="p-info delete" 
+                                                @click="deleteMessage(index)">
+                                                Cancella messaggio
+                                            </p>
                                         </div>
                                     </p>
-                                    
                                 </div>
 
                                 <!-- <div class="container-send ctn-received" >

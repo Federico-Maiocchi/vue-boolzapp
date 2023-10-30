@@ -7,6 +7,7 @@ createApp ({
         return {
             currentContact: 0,
             show: false,
+            currentMessage: 0,
             msgEntrance: '',
             nameSearch: '',
             nameArray: [],
@@ -184,8 +185,6 @@ createApp ({
             // console.log('ho cliccato qui', index)
         },
 
-        
-
         addNewSentMsg() {
 
             const newSentMsg = {
@@ -239,6 +238,23 @@ createApp ({
 
             }
         },
+
+        showMenuItem(index) {
+            this.currentMessage = index;
+
+            this.show = !this.show;
+
+        },
+        
+
+        deleteMessage(index) {
+
+            this.currentMessage = index
+
+            this.contacts[this.currentContact].messages.splice(index,1)
+
+
+        }
 
 
 
