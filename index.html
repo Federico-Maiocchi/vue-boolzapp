@@ -102,15 +102,19 @@
                                     v-for="(item, index) in contacts[currentContact].messages" 
                                     :class="item.status === 'received' ? 'ctn-received' : '' ">
 
-                                    <p class="message-send" 
-                                    :class="item.status === 'received' ? 'mesg-received' : '' ">
+                                    <p class="message-send ">
                                         {{item.message}}
-                                        <span><i class="fa-solid fa-chevron-down"></i></span>
+                                        <span class="d-none box-menu" @click="show = !show">
+                                            <i class="fa-solid fa-chevron-down">
+
+                                            </i>
+                                        </span>
+                                        <div class="menu-item " v-show="show">
+                                            <p class="p-info">Messaggio info</p>
+                                            <p class="p-info delete">Cancella messaggio</p>
+                                        </div>
                                     </p>
-                                    <div class="menu-item">
-                                        <p class="p-info">Messaggio info</p>
-                                        <p class="p-info delete">Cancella messaggio</p>
-                                    </div>
+                                    
                                 </div>
 
                                 <!-- <div class="container-send ctn-received" >

@@ -6,6 +6,7 @@ createApp ({
     data() {
         return {
             currentContact: 0,
+            show: false,
             msgEntrance: '',
             nameSearch: '',
             nameArray: [],
@@ -182,6 +183,8 @@ createApp ({
             this.currentContact = index;
             // console.log('ho cliccato qui', index)
         },
+
+        
 
         addNewSentMsg() {
 
