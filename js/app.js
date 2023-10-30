@@ -8,8 +8,6 @@ createApp ({
             currentContact: 0,
             show: false,
             currentMessage: 0,
-            hours: [],
-            arrayMessage: [],
             msgEntrance: '',
             nameSearch: '',
             nameArray: [],
@@ -181,14 +179,16 @@ createApp ({
     },
     ////////////////////////////////////////////////////////////////////////////
     methods: {
+
+        // Funzione per associare l'indice ai contatti
         thisContact(index) {
             // console.log('ho cliccato qui')
             this.currentContact = index;
             // console.log('ho cliccato qui', index)
         },
 
+        // Funzione per stampare il messaggio (input) in chat e avere una risposta automatica di un 1 secondo
         addNewSentMsg() {
-
             const newSentMsg = {
                 date: '10/01/2020 15:51:00',
                 message: this.msgEntrance,
@@ -211,12 +211,13 @@ createApp ({
                 }
     
                 this.contacts[this.currentContact].messages.push(newReceivedMsg);
-                console.log(this.contacts[this.currentContact].messages)
+                // console.log(this.contacts[this.currentContact].messages)
 
             }, 1000 );
 
         },
 
+        // Funzione per ricercare tramite search input il nome degli utenti nei contatti
         searchName() {
             this.nameArray.push(this.nameSearch)
             
@@ -241,12 +242,7 @@ createApp ({
             }
         },
 
-        // gethours(hours) {
-
-        //     let hoursMessage = this.messages[currentMessage].date.slice(-1);
-        //     console.log(hoursMessage, this.contacts.messages.date);
-        // },
-
+        // Funzione per associare l'indice ai messaggi
         showMenuItem(index) {
             this.currentMessage = index;
 
@@ -254,36 +250,23 @@ createApp ({
 
         },
         
-
+        // Funzione per cancellare i messaggi nel boxdown
         deleteMessage(index) {
-            console.log('click')
+            // console.log('click')
 
             this.currentMessage = index;
-            console.log(this.currentMessage);
+            // console.log(this.currentMessage);
 
             this.contacts[this.currentContact].messages.splice(index,1);
-            console.log(this.contacts[this.currentContact].messages.splice(index,1))
-
-
+            // console.log(this.contacts[this.currentContact].messages.splice(index,1))
         }
 
-
-
-        // getPropretyInArray() {
-
-        //     const messages = [];
-
-        //     for (let i = messages.length - 1; i >= 0; i--) {
-        //         messagesIndex = messages.length[i];
-        //         console.log(this.messagesIndex)
-        //     }
-        // },
         
     },
     ////////////////////////////////////////////////////////////////////////////
     mounted() {
         // console.log('Prova Vue');
-        // console.log(this.messages)
+
         
     }
 
