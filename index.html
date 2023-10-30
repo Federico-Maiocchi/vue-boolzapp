@@ -85,7 +85,7 @@
                                             <img :src="contacts[currentContact].avatar" alt="">
                                             <div>
                                                 <h4 class="name-contacts">{{contacts[currentContact].name}}</h4>
-                                                <p class="message-contacts">Ultimo accesso oggi alle 12:00</p>
+                                                <p class="message-contacts">{{contacts[currentContact].messages[currentMessage].date}}</p>
                                             </div> 
                                         </div>   
                                     </figure>
@@ -100,22 +100,24 @@
                             <div class="chat-body" >
                                 <div class="container-send" 
                                     v-for="(item, index) in contacts[currentContact].messages" 
-                                    :class="item.status === 'received' ? 'ctn-received' : '' ">
+                                    :class="item.status === 'received' ? 'ctn-received' : '' "
+                                    @mouseleave.stop="this.show = false">
 
-                                    <p class="message-send" 
+                                    <p class="message-send "
+                                        
                                         :class="item.status === 'received' ? 'mesg-received' : '' ">
                                         {{item.message}}
                                         <span class="d-none box-menu" 
-                                                @click="showMenuItem(index)">
+                                                @click.stop="showMenuItem(index)">
                                             <i class="fa-solid fa-chevron-down">
                                             </i>
                                         </span>
                                         <div class="menu-item " 
                                             v-show="show && index === this.currentMessage"
-                                            @mouseleave="this.show = false">
+                                            @mouseleave.stop="this.show = false">
                                             <p class="p-info">Messaggio info</p>
                                             <p class="p-info delete" 
-                                                @click="deleteMessage(index)">
+                                                @click.stop="deleteMessage(index)">
                                                 Cancella messaggio
                                             </p>
                                         </div>

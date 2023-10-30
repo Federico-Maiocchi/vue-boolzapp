@@ -8,6 +8,7 @@ createApp ({
             currentContact: 0,
             show: false,
             currentMessage: 0,
+            arrayMessage: [],
             msgEntrance: '',
             nameSearch: '',
             nameArray: [],
@@ -239,6 +240,14 @@ createApp ({
             }
         },
 
+        gethours() {
+
+
+
+            let hoursMessage = this.messages[currentMessage].date.slice(-1)
+            console.log(hoursMessage, this.contacts.messages.date)
+        },
+
         showMenuItem(index) {
             this.currentMessage = index;
 
@@ -248,10 +257,13 @@ createApp ({
         
 
         deleteMessage(index) {
+            console.log('click')
 
-            this.currentMessage = index
+            this.currentMessage = index;
+            console.log(this.currentMessage);
 
-            this.contacts[this.currentContact].messages.splice(index,1)
+            this.contacts[this.currentContact].messages.splice(index,1);
+            console.log(this.contacts[this.currentContact].messages.splice(index,1))
 
 
         }
@@ -272,6 +284,7 @@ createApp ({
     ////////////////////////////////////////////////////////////////////////////
     mounted() {
         // console.log('Prova Vue');
+        // console.log(this.messages)
         
     }
 
