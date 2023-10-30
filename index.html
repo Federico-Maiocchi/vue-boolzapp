@@ -63,11 +63,11 @@
                                                     <img :src="contact.avatar" alt="">
                                                     <div>
                                                         <h4 class="name-contacts">{{contact.name}}</h4>
-                                                        <p class="message-contacts">Ultimo messaggio inviato</p>
+                                                        <p class="message-contacts">{{contact.messages[contact.messages.length -1].message }}</p>
                                                     </div> 
                                                 </div>   
                                             </figure>
-                                            <span class="hours">12:00</span>
+                                            <span class="hours">{{contact.messages[contact.messages.length -1].date }}</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -85,7 +85,7 @@
                                             <img :src="contacts[currentContact].avatar" alt="">
                                             <div>
                                                 <h4 class="name-contacts">{{contacts[currentContact].name}}</h4>
-                                                <p class="message-contacts">{{contacts[currentContact].messages[currentMessage].date}}</p>
+                                                <p class="message-contacts">ultimo accesso</p>
                                             </div> 
                                         </div>   
                                     </figure>
@@ -100,24 +100,22 @@
                             <div class="chat-body" >
                                 <div class="container-send" 
                                     v-for="(item, index) in contacts[currentContact].messages" 
-                                    :class="item.status === 'received' ? 'ctn-received' : '' "
-                                    @mouseleave.stop="this.show = false">
+                                    :class="item.status === 'received' ? 'ctn-received' : '' ">
 
-                                    <p class="message-send "
-                                        
+                                    <p class="message-send" 
                                         :class="item.status === 'received' ? 'mesg-received' : '' ">
                                         {{item.message}}
                                         <span class="d-none box-menu" 
-                                                @click.stop="showMenuItem(index)">
+                                                @click="showMenuItem(index)">
                                             <i class="fa-solid fa-chevron-down">
                                             </i>
                                         </span>
                                         <div class="menu-item " 
                                             v-show="show && index === this.currentMessage"
-                                            @mouseleave.stop="this.show = false">
+                                            @mouseleave="this.show = false">
                                             <p class="p-info">Messaggio info</p>
                                             <p class="p-info delete" 
-                                                @click.stop="deleteMessage(index)">
+                                                @click="deleteMessage(index)">
                                                 Cancella messaggio
                                             </p>
                                         </div>

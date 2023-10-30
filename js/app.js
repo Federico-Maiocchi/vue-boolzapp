@@ -8,6 +8,7 @@ createApp ({
             currentContact: 0,
             show: false,
             currentMessage: 0,
+            hours: [],
             arrayMessage: [],
             msgEntrance: '',
             nameSearch: '',
@@ -240,13 +241,11 @@ createApp ({
             }
         },
 
-        gethours() {
+        // gethours(hours) {
 
-
-
-            let hoursMessage = this.messages[currentMessage].date.slice(-1)
-            console.log(hoursMessage, this.contacts.messages.date)
-        },
+        //     let hoursMessage = this.messages[currentMessage].date.slice(-1);
+        //     console.log(hoursMessage, this.contacts.messages.date);
+        // },
 
         showMenuItem(index) {
             this.currentMessage = index;

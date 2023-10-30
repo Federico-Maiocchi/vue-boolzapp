@@ -39,17 +39,9 @@ html {
     flex-direction: column;
 }
 
-.justify-space-between {
-    justify-content: space-between;
-    
-}
-
-.justify-space-around {
-    justify-content: space-around;
-}
-
-.align-items-center {
-    align-items: center;
+/* TEXT ALIGN */
+.text-end {
+    text-align: end;
 }
 
 /* PADDING */
